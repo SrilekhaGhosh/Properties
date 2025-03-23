@@ -1,6 +1,8 @@
-import React from "react";
+const SimilarProperties = ({ properties, OnSelect }) => {
+  if (!properties || properties.length === 0) {
+    return <p className="text-center text-gray-500">No similar properties found.</p>;
+  }
 
-const SimilarProperties = ({ properties }) => {
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold text-left">Similar Properties</h2>
@@ -9,15 +11,13 @@ const SimilarProperties = ({ properties }) => {
           <div
             key={property.id}
             className="border rounded-lg shadow-lg cursor-pointer transition transform hover:scale-105"
+            onClick={() => OnSelect(property)} 
           >
-          
             <img
-              src={property.image}
+              src={property?.hero_images?.[0]}
               alt={property.name}
               className="w-full h-36 object-cover rounded-t-lg"
             />
-            
-            
             <div className="p-3">
               <h3 className="text-md font-semibold truncate">{property.name}</h3>
               <p className="text-sm text-gray-500 truncate">{property.location}</p>

@@ -16,6 +16,13 @@ const Home = () => {
   const [selectedProperty, setSelectedProperty] = useState(propertyData[0]);
   const [selectedBHK, setSelectedBHK] = useState(selectedProperty.apartments[0]);
 
+
+  const handlePropertySelection = (property) => {
+    if (!property) return; 
+    setSelectedProperty(property); 
+    console.log(property);
+  };
+
   return (
     <div>
       <HeroSection images={selectedProperty.hero_images} />
@@ -37,7 +44,7 @@ const Home = () => {
       </div >
       </div>
       <div>
-      <SimilarProperties properties={selectedProperty.similar_projects}  />
+      <SimilarProperties properties={propertyData}  OnSelect={handlePropertySelection } />
       </div>
       
     
