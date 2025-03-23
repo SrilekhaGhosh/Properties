@@ -9,10 +9,10 @@ const FloorPlans = ({ plans }) => {
 
   return (
     <div className="mt-4 p-4 border rounded-lg shadow-md bg-white max-w-lg"> 
-      {/* Title */}
+     
       <h3 className="text-lg font-semibold text-left mb-2">Floor Plan</h3>
 
-      {/* Buttons Container */}
+      
       <div className="flex space-x-2 mb-4">
         {plans.map((plan, index) => (
           <button
@@ -27,7 +27,7 @@ const FloorPlans = ({ plans }) => {
         ))}
       </div>
 
-      {/* Fixed Size Floor Plan Display */}
+      
       <div className="w-full h-[300px] flex items-center justify-center border rounded-lg overflow-hidden bg-gray-100">
         {selected.image && (
           <div className="w-full h-full flex flex-col items-center">

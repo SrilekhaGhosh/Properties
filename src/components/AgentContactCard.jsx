@@ -15,7 +15,7 @@ const AgentCard = ({details}) => {
         </div>
       </div>
 
-      {/* Contact Buttons */}
+     
       <div className="flex gap-2 mt-3">
         <button className="flex items-center justify-center bg-green-600 text-white px-4 py-0 rounded-md flex-1 text-sm font-semibold shadow-md">
           📞 Call
@@ -28,7 +28,7 @@ const AgentCard = ({details}) => {
         </button>
       </div>
 
-      {/* View More */}
+     
       <div className="text-blue-500 text-center mt-3 text-sm cursor-pointer">
         View all properties ➝
       </div>

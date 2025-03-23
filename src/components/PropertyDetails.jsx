@@ -3,11 +3,11 @@ import { CheckCircle, LocationOn, KingBed, Bathtub, CropSquare } from "@mui/icon
 const PropertyDetails = ({ property }) => {
   return (
     <div className="w-full bg-white shadow-md rounded-lg p-6 mt-6">
-      {/* Property Name & Location */}
+    
       <h1 className="text-2xl font-bold text-left">{property.name}</h1>
 
       
-      {/* Beds, Baths, Sq Ft */}
+    
       <div className="flex items-center space-x-4 mt-2 text-gray-700">
         <div className="flex items-center">
           <KingBed fontSize="small" />
@@ -18,7 +18,7 @@ const PropertyDetails = ({ property }) => {
           <span className="ml-1">{property.baths} Baths</span>
         </div>
         <div className="flex items-center">
-          {/* <CropSquare fontSize="small" /> */}
+        
           <span className="ml-1">{property.sqft} sqft</span>
         </div>
       </div>
@@ -28,7 +28,6 @@ const PropertyDetails = ({ property }) => {
       </div>
 
 
-      {/* Verified & Amenities Count */}
       <div className="flex items-center space-x-6 mt-4 text-gray-700">
         <div className="flex items-center">
           <CheckCircle fontSize="small" className={`text-${property.verified ? "green" : "red"}-500`} />

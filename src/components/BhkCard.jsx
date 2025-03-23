@@ -13,10 +13,10 @@ const BHKCard = ({ bhk, isSelected, onSelect }) => {
       }}
     >
       <CardContent className="p-2">
-        {/* BHK Type with Background */}
+       
         <Box
           sx={{
-            backgroundColor: "#FEE2E2", // Light red/pinkish shade (similar to image)
+            backgroundColor: "#FEE2E2", 
             display: "inline-block",
             padding: "6px 10px",
             borderRadius: "6px",
@@ -25,7 +25,7 @@ const BHKCard = ({ bhk, isSelected, onSelect }) => {
           <Typography
             variant="body1"
             className="font-bold text-gray-800"
-            sx={{ fontSize: "16px", fontWeight: 600, color: "#B91C1C" }} // Darker red text
+            sx={{ fontSize: "16px", fontWeight: 600, color: "#B91C1C" }} 
           >
             {bhk.type} Apartment
           </Typography>

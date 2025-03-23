@@ -5,7 +5,7 @@ const HeroSection = ({ images }) => {
 
   return (
     <div className="max-w-7xl mx-auto p-4 grid grid-cols-4 gap-4">
-      {/* Large Image (Left Side) */}
+      
       <div className="col-span-3">
         <img
           src={selectedImage}
@@ -14,7 +14,7 @@ const HeroSection = ({ images }) => {
         />
       </div>
 
-      {/* Smaller Images (Right Side) */}
+   
       <div className="h-[500px] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-300">
         <div className="flex flex-col gap-4">
           {images.map((image, index) => (

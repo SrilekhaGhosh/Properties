@@ -6,14 +6,14 @@ const PropertyCard = ({ property, selectProperty }) => {
       className="border rounded-lg shadow-lg cursor-pointer transition transform hover:scale-105"
       onClick={() => selectProperty(property)}
     >
-      {/* Image with Reduced Height */}
+    
       <img
-        src={property.hero_images[0]} // Using the first hero image
+        src={property.hero_images[0]} 
         alt={property.name}
         className="w-full h-36 object-cover rounded-t-lg"
       />
       
-      {/* Property Details with Less Padding */}
+     
       <div className="p-3">
         <h3 className="text-md font-semibold truncate">{property.name}</h3>
         <p className="text-sm text-gray-500 truncate">{property.location}</p>
