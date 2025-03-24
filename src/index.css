@@ -7,16 +7,13 @@
 
 /* Ensure the background remains white and text remains black */
 :root {
-    background-color: white !important;
-    color: black;
-    color-scheme: only light;
+  background-color: white !important;
+  color: black;
+  color-scheme: only light;
 }
 
-/* Apply styles to body to maintain white background */
 body {
-    @apply bg-white text-black;
-    margin: 0;
-    padding: 0;
+  @apply bg-white text-black;
 }
 
 /* Ensure links are styled properly */
