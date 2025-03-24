@@ -68,7 +68,7 @@
     "agent": {
       "name": "Nakshathra",
       "designation": "Pro Advisor, Real Estate",
-      "profileImage": "../assets/images/agent-nakshathra.jpg",
+      "profileImage":" https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp",
       "contact": {
         "call": "+91 98765 43210",
         "email": "nakshathra@example.com",
@@ -144,7 +144,7 @@
     "agent": {
       "name": "Nakshathra",
       "designation": "Pro Advisor, Real Estate",
-      "profileImage": "../assets/images/agent-nakshathra.jpg",
+      "profileImage": "https://tse3.mm.bing.net/th?id=OIP.BrIw2jsHGAiKMR-a9OUPbwHaE8&pid=Api&P=0&h=180",
       "contact": {
         "call": "+91 98765 43210",
         "email": "nakshathra@example.com",
@@ -221,7 +221,7 @@
     "agent": {
       "name": "Nakshathra",
       "designation": "Pro Advisor, Real Estate",
-      "profileImage": "../assets/images/agent-nakshathra.jpg",
+      "profileImage": "https://tse1.mm.bing.net/th?id=OIP.m6YrvhHpfSmQ2ZtE6mALWwHaJQ&pid=Api&P=0&h=180",
       "contact": {
         "call": "+91 98765 43210",
         "email": "nakshathra@example.com",
@@ -298,7 +298,7 @@
     "agent": {
       "name": "Nakshathra",
       "designation": "Pro Advisor, Real Estate",
-      "profileImage": "../assets/images/agent-nakshathra.jpg",
+      "profileImage": "https://tse1.mm.bing.net/th?id=OIP.yMV4KO9gDo9tz537U_CNywHaHa&pid=Api&P=0&h=180",
       "contact": {
         "call": "+91 98765 43210",
         "email": "nakshathra@example.com",
@@ -375,7 +375,7 @@
     "agent": {
       "name": "Nakshathra",
       "designation": "Pro Advisor, Real Estate",
-      "profileImage": "../assets/images/agent-nakshathra.jpg",
+      "profileImage": "https://tse1.mm.bing.net/th?id=OIP.yMV4KO9gDo9tz537U_CNywHaHa&pid=Api&P=0&h=180",
       "contact": {
         "call": "+91 98765 43210",
         "email": "nakshathra@example.com",
