@@ -10,14 +10,14 @@ const FloorPlans = ({ plans }) => {
   return (
     <div className="mt-4 p-4 border rounded-lg shadow-md bg-white max-w-lg"> 
      
-      <h3 className="text-lg font-semibold text-left mb-2">Floor Plan</h3>
+      <h3 className="text-lg font-semibold text-left mb-2">Floor Plans</h3>
 
       
       <div className="flex space-x-2 mb-4">
         {plans.map((plan, index) => (
           <button
             key={index}
-            className={`px-4 py-2 border rounded ${
+            className={`px-4 py-0 border rounded ${
               selected === plan ? "bg-blue-500 text-white" : "bg-gray-200"
             }`}
             onClick={() => SetSelected(plan)}
