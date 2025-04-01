@@ -4,56 +4,81 @@ const BHKCard = ({ bhk, isSelected, onSelect }) => {
   return (
     <Card
       className={`cursor-pointer transition-all duration-300 border-[1.5px] rounded-lg 
-      ${isSelected ? "border-red-500 shadow-lg scale-105" : "border-gray-300 hover:border-gray-500"}`}
+        ${isSelected ? "border-red-500 shadow-lg scale-105" : "border-gray-300 hover:border-gray-500"}`}
       onClick={() => onSelect(bhk)}
       sx={{
-        minWidth: 180,
-        padding: "12px",
+        minWidth: 240, // Matches image width
+        maxWidth: 320, // Prevents excessive expansion
+        height: 150, // Matches image height
+        padding: 0, // Removed unnecessary padding
         borderRadius: "8px",
+        display: "inline-block", // Ensures it stays in a line
+        boxShadow: isSelected ? "0px 0px 8px rgba(255, 0, 0, 0.5)" : "none", // Adds shadow to selected card
       }}
     >
-      <CardContent className="p-2">
-       
+      <CardContent
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height: "100%", // Ensures proper alignment
+          padding: "10px", // Adjusted padding for tighter layout
+        }}
+      >
+        {/* BHK Type Box */}
         <Box
           sx={{
-            backgroundColor: "#FEE2E2", 
-            display: "inline-block",
+            backgroundColor: "#FEE2E2", // Light Pink Background
             padding: "6px 10px",
             borderRadius: "6px",
+            textAlign: "left",
+            display: "inline-block",
           }}
         >
           <Typography
             variant="body1"
-            className="font-bold text-gray-800"
-            sx={{ fontSize: "16px", fontWeight: 600, color: "#B91C1C" }} 
+            sx={{
+              fontSize: "14px",
+              fontWeight: 600,
+              color: "#000000", // **Black text** as per the image
+            }}
           >
             {bhk.type} Apartment
           </Typography>
         </Box>
 
+             {/* Carpet Area */}
+        <Typography
+          variant="body2"
+          sx={{
+            fontSize: "12px",
+            fontWeight: 500,
+            color: "#000000", // **Black text** as in the image
+            textAlign: "left",
+          }}
+        >
+          Carpet Area: <br/>
+          {bhk.carpet_area} 
+        </Typography>
         {/* Price */}
         <Typography
           variant="body2"
-          className="text-gray-600 mt-1"
-          sx={{ fontSize: "14px", fontWeight: 500 }}
+          sx={{
+            fontSize: "14px",
+            fontWeight: 500,
+            color: "#3D3D3D",
+            marginTop: "4px",
+            textAlign: "left",
+          }}
         >
-          ₹ {bhk.price} Cr
+        <span className="font-bold">₹ {bhk.price}</span>
+        <span className="text-orange-500"> + Charges</span>
         </Typography>
 
         {/* Divider */}
-        <Box
-          className="w-full bg-gray-300 my-2"
-          sx={{ height: "1px", backgroundColor: "#E0E0E0" }}
-        />
+       
 
-        {/* Area */}
-        <Typography
-          variant="body2"
-          className="text-gray-700"
-          sx={{ fontSize: "12px", fontWeight: 500 }}
-        >
-          Carpet Area: {bhk.carpet_area} sqft
-        </Typography>
+       
       </CardContent>
     </Card>
   );

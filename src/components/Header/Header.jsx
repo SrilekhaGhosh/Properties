@@ -1,75 +1,73 @@
-import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { Avatar, Badge, Button } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 
 export default function Header() {
     return (
-        <header className="shadow sticky z-50 top-0">
-            <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
-                <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <header className="shadow sticky z-50 top-0 bg-white">
+            <nav className="border-gray-200 px-4 lg:px-6 py-2.5">
+                <div className="flex justify-between items-center mx-auto max-w-screen-xl">
+                    
+                    {/* Logo */}
                     <Link to="/" className="flex items-center">
-                        <img
-                            src="https://tse2.mm.bing.net/th?id=OIP.gf5nb6wN5DNQhfZBtxO7aQAAAA&pid=Api&P=0&h=180"
-                            className="mr-3 h-12"
-                            alt="Logo"
-                        />
+                        <h2 className="text-2xl font-bold">
+                            Dot<span className="text-red-500">linker</span>
+                        </h2>
                     </Link>
-                    <div className="flex items-center lg:order-2">
-                        
-                       
-                    </div>
-                    <div
-                        className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-                        id="mobile-menu-2"
-                    >
-                        <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                           
-                        <li>
-                                <NavLink
-                                to="/"
-                                    className={({isActive}) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
-                                >
-                                    For property
-                                </NavLink>
-                            </li> 
-                           
-                            <li>
-                                <NavLink
-                                to="/about"
-                                    className={({isActive}) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
-                                >
-                                    About Us
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                to="/insight"
-                                    className={({isActive}) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
-                                >
-                                    Insight
-                                    
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                to="/contact"
-                                    className={({isActive}) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
-                                >
-                                    Contact US
 
-                                </NavLink>
-                            </li>
-                           
-                            
-                        </ul>
+                    {/* Navigation Links */}
+                    <div className="hidden lg:flex space-x-8">
+                        <NavLink to="/" className={({ isActive }) =>
+                            `text-sm font-medium ${isActive ? 'text-orange-700' : 'text-gray-700'} hover:text-orange-700`
+                        }>
+                            For Property
+                        </NavLink>
+                        <NavLink to="/about" className={({ isActive }) =>
+                            `text-sm font-medium ${isActive ? 'text-orange-700' : 'text-gray-700'} hover:text-orange-700`
+                        }>
+                            About Us
+                        </NavLink>
+                        <NavLink to="/insight" className={({ isActive }) =>
+                            `text-sm font-medium ${isActive ? 'text-orange-700' : 'text-gray-700'} hover:text-orange-700`
+                        }>
+                            Insights
+                        </NavLink>
+                        <NavLink to="/contact" className={({ isActive }) =>
+                            `text-sm font-medium ${isActive ? 'text-orange-700' : 'text-gray-700'} hover:text-orange-700`
+                        }>
+                            Contact Us
+                        </NavLink>
                     </div>
+
+                    {/* Right Side - Customize Button & Profile */}
+                    <div className="flex items-center space-x-6">
+                        {/* Customize Property Button */}
+                        {/* <Button
+                            variant="contained"
+                            color="error"
+                            startIcon={<AddIcon />}
+                            size="small"
+                            className="capitalize"
+                        >
+                           
+                        </Button> */}
+                        <span className="text-sm font-medium text-orange-500">+ Customize Property</span>
+                        {/* Profile Avatar with Notification Dot */}
+                        <Badge
+                            color="error"
+                            variant="dot"
+                            overlap="circular"
+                            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                        >
+                            <Avatar
+                                alt="User Profile"
+                                src="https://mui.com/static/images/avatar/1.jpg"
+                                sx={{ width: 32, height: 32 }}
+                            />
+                        </Badge>
+                    </div>
+
                 </div>
             </nav>
         </header>

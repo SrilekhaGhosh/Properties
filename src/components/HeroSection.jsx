@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HeroSection = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
+  useEffect(() => {
+    setSelectedImage(images[0]);
+  }
+  , [images]);
+  
   return (
     <div className="max-w-7xl mx-auto p-4 grid grid-cols-4 gap-4">
       

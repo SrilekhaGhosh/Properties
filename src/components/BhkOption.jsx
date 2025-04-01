@@ -1,14 +1,22 @@
-import { useState } from "react";
+
 import BHKCard from './BhkCard';
+import { Card, CardContent, Typography, Box } from "@mui/material";
+import { useState } from "react";
 
 const BHKOptions = ({ bhkOptions, onSelectBHK }) => {
-    //console.log(bhkOptions);
   const [selectedBHK, setSelectedBHK] = useState(bhkOptions[0]);
 
-  return (
-    <div className="max-w-7xl mx-auto p-4">
-    
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    return (
+      <div
+        className="max-w-7xl mx-auto p-4 t+py-4 overflow-x-auto whitespace-nowrap"
+        style={{
+          display: "flex",
+          gap: "16px", // Space between cards
+          overflowX: "auto", // Enables horizontal scrolling
+          whiteSpace: "nowrap", // Keeps all cards in a single line
+          paddingBottom: "10px", // Prevents scrollbar overlap
+        }}
+      >
         {bhkOptions.map((bhk, index) => (
           <BHKCard
             key={index}
@@ -21,8 +29,6 @@ const BHKOptions = ({ bhkOptions, onSelectBHK }) => {
           />
         ))}
       </div>
-    </div>
-  );
-};
-
+    );
+  };
 export default BHKOptions;

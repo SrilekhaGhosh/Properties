@@ -26,8 +26,8 @@ const Home = () => {
   return (
     <div>
       <HeroSection images={selectedProperty.hero_images} />
-      <div class="flex">
-        <div class="w-2/3">
+      <div class="flex justify-between max-w-full mx-auto gap-10">
+        <div class="w-[60%] p-4 ">
       <PropertyDetails property={selectedProperty} />
       <BhkOptions bhkOptions={selectedProperty.apartments} onSelectBHK={setSelectedBHK} />
       <Description text={selectedProperty.description} />
@@ -39,7 +39,7 @@ const Home = () => {
       
       </div>
 
-      <div class="w-1/3">
+      <div class="w-[30%]">
       <RightSidebar agent_details={selectedProperty.agent}/>
       </div >
       </div>

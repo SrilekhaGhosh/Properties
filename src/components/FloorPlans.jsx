@@ -8,7 +8,7 @@ const FloorPlans = ({ plans }) => {
   }, [plans]);
 
   return (
-    <div className="mt-4 p-4 border rounded-lg shadow-md bg-white max-w-lg"> 
+    <div className="mt-4 p-4 border rounded-lg shadow-md bg-white w-full"> 
      
       <h3 className="text-lg font-semibold text-left mb-2">Floor Plans</h3>
 
@@ -18,7 +18,7 @@ const FloorPlans = ({ plans }) => {
           <button
             key={index}
             className={`px-4 py-0 border rounded ${
-              selected === plan ? "bg-blue-500 text-white" : "bg-gray-200"
+              selected === plan ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
             }`}
             onClick={() => SetSelected(plan)}
           >
