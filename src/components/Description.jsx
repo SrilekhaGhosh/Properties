@@ -30,7 +30,7 @@ const Description = ({ text }) => {
       <div className="mt-6">
         <h2 className="text-2xl font-bold text-left">Description</h2>
         <div className="text-gray-600 border-b border-gray-300 pb-2">
-          <p className={`leading-relaxed ${expanded ? "h-auto" : "h-32 overflow-hidden"}`}>
+          <p className={`leading-relaxed ${expanded ? "h-auto" : "h-24 overflow-hidden"}`}>
             {text}
           </p>
           {/* Read More / Read Less */}
