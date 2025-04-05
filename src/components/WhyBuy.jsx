@@ -24,7 +24,7 @@ const WhyBuy = () => {
       </ul>
 
       
-      <button className="border border-orange-500 text-orange-500 px-2 py-0 rounded-lg mt-3 w-1/3">
+      <button className="border bg-white border-orange-500 text-orange-500 px-4 py-1 rounded-lg mt-5 w-2/4">
          Brochure
       </button>
     </div>
