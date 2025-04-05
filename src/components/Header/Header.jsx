@@ -73,31 +73,38 @@ export default function Header() {
                         >
                            
                         </Button> */}
-                        <span className="text-sm font-medium text-orange-500">+ Customize Property</span>
-                        {/* Profile Avatar with Notification Dot */}
-                        {/* <Badge
-                            color="error"
-                            variant="dot"
-                            overlap="circular"
-                            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-                        >
-                            <Avatar
-                                alt="User Profile"
-                                src="https://mui.com/static/images/avatar/1.jpg"
-                                sx={{ width: 32, height: 32 }}
-                            />
-                        </Badge> */}
+                       <div className="flex items-center gap-2">
+  <IconButton
+    size="small"
+    sx={{
+      backgroundColor: '#e53935', 
+      width: 24,
+      height: 24,
+      padding: 0,
+      borderRadius: '6px',
+      '&:hover': {
+        backgroundColor: '#d32f2f',
+      },
+    }}
+  >
+    <AddIcon sx={{ fontSize: 16, color: 'white' }} />
+  </IconButton>
+  <span className="text-sm font-medium text-orange-500">Customize Property</span>
+</div>
+                    
+                        {/* Profile Icon with Tooltip */}
                         <Tooltip title="My Account" arrow>
-          <IconButton
-            onClick={handleClick}
-            size="small"
-            sx={{ ml: 2 }}
-            aria-controls={open ? 'My Account' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-          >
-         <Avatar
-                                alt="User Profile"
+                    <IconButton
+                        onClick={handleClick}
+                        varient="dot"
+                        size="small"
+                        sx={{ ml: 2 }}
+                        aria-controls={open ? 'My Account' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                    >
+                    <Avatar
+                                alt="my profile"
                                 src="https://mui.com/static/images/avatar/1.jpg"
                                 sx={{ width: 32, height: 32 }}
                             />
