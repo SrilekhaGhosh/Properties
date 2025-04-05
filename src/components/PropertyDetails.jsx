@@ -96,7 +96,7 @@ const PropertyDetails = ({ property }) => {
       <Box
         sx={{
           backgroundColor: "white",
-          padding: "6px 16px",
+          padding: "6px 20px",
           borderRadius: "16px",
           fontSize: "12px",
           fontWeight: 500,
@@ -115,7 +115,7 @@ const PropertyDetails = ({ property }) => {
       <Box
         sx={{
           backgroundColor: "#00A884",
-          padding: "6px 16px",
+          padding: "6px 30px",
           borderRadius: "16px",
           fontSize: "12px",
           fontWeight: 500,

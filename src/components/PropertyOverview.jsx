@@ -46,12 +46,12 @@ const PropertyOverview = ({ details }) => {
       </div>
 
       {/* Buttons Section with Correct Colors */}
-      <div className="mt-6 flex gap-4">
-        <button className="flex items-center gap-2 px-6 py-2 border rounded-lg text-[#E88873] border-[#E88873] bg-[#FBEAE5] hover:bg-[#F8D3C3]">
+      <div className="mt-6 flex gap-2">
+        <button className="flex items-center ml-2  px-10 py-2   rounded-lg text-[#E88873] border-[#E88873] bg-[#FBEAE5] hover:bg-[#F8D3C3]">
           <ShareOutlinedIcon className="text-[#E88873]" />
           Share
         </button>
-        <button className="flex items-center gap-2 px-6 py-2 border rounded-lg text-[#E88873] border-[#E88873] bg-[#FBEAE5] hover:bg-[#F8D3C3]">
+        <button className="flex items-center  px-10 py-2   rounded-lg text-[#E88873] border-[#E88873] bg-[#FBEAE5] hover:bg-[#F8D3C3]">
           <FavoriteBorderOutlinedIcon className="text-[#E88873]" />
           Save
         </button>
