@@ -36,7 +36,7 @@ const Description = ({ text }) => {
           {/* Read More / Read Less */}
           <div
             className="text-blue-600 font-medium cursor-pointer flex items-center gap-1 mt-2"
-            onClick={() => setExpanded(!expanded)}
+            onClick={() => setExpanded(!expanded)} 
           >
             {expanded ? (
               <>

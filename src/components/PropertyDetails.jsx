@@ -164,9 +164,9 @@ const PropertyDetails = ({ property }) => {
 
 
       {/* Construction Status */}
-      <div className="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-lg">
+      <div className={`mt-4 p-4 ${property.status==='complete'?'bg-green-50  border-green-500' : 'bg-blue-50  border-blue-500'} border-l-4 rounded-lg`}>
         <h6 className="text-xs font-semibold text-gray-600 text-left">CONSTRUCTION STATUS</h6>
-        <p className="text-lg font-medium text-blue-700 text-left">{property.status}</p>
+        <p className={`text-lg font-medium ${property.status==='complete'? 'text-green-700' :'text-blue-700'} text-left`}>{property.status}</p>
       </div>
       <div className="flex items-start p-2 mt-2">
   <SellIcon className="mr-2" />

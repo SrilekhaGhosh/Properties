@@ -1,16 +1,21 @@
 import { IconButton, Button } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addToWishlist, removeFromWishlist } from '../store/wishlistSlice';
 
 const SimilarProperties = ({ properties, OnSelect }) => {
-  const [likedProperties, setLikedProperties] = useState({});
+  const wishlist = useSelector((state) => state.wishlist);
+  const dispatch = useDispatch();
 
-  const handleLike = (id) => {
-    setLikedProperties((prev) => ({
-      ...prev,
-      [id]: !prev[id], // Toggle like state
-    }));
+  const isLiked = (id) => wishlist.some((item) => item.id === id);
+
+  const handleLike = (property) => {
+    if (isLiked(property.id)) {
+      dispatch(removeFromWishlist(property.id));
+    } else {
+      dispatch(addToWishlist(property));
+    }
   };
 
   if (!properties || properties.length === 0) {
@@ -20,8 +25,6 @@ const SimilarProperties = ({ properties, OnSelect }) => {
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold text-left mb-3">Similar Properties</h2>
-
-      {/* Scrollable Container */}
       <div className="overflow-x-auto">
         <div className="flex gap-6">
           {properties.map((property) => (
@@ -30,19 +33,16 @@ const SimilarProperties = ({ properties, OnSelect }) => {
               className="border rounded-lg shadow-lg cursor-pointer transition transform hover:scale-105 min-w-[250px]"
               onClick={() => OnSelect(property)}
             >
-              {/* Property Image with Like Button */}
               <div className="relative">
                 <img
                   src={property?.hero_images?.[0]}
                   alt={property.name}
                   className="w-full h-36 object-cover rounded-t-lg"
                 />
-                
-                {/* Like Button Positioned Inside Image */}
                 <IconButton
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent triggering onClick for card
-                    handleLike(property.id);
+                    e.stopPropagation();
+                    handleLike(property);
                   }}
                   className="text-left absolute top-2 right-2 bg-white rounded-full shadow-md"
                   style={{
@@ -53,7 +53,7 @@ const SimilarProperties = ({ properties, OnSelect }) => {
                     justifyContent: "center",
                   }}
                 >
-                  {likedProperties[property.id] ? (
+                  {isLiked(property.id) ? (
                     <FavoriteIcon fontSize="small" className="text-red-500" />
                   ) : (
                     <FavoriteBorderIcon fontSize="small" className="text-gray-500" />
@@ -61,7 +61,6 @@ const SimilarProperties = ({ properties, OnSelect }) => {
                 </IconButton>
               </div>
 
-              {/* Property Details */}
               <div className="p-3">
                 <h3 className="text-left text-md font-semibold truncate">{property.name}</h3>
                 <p className="text-left text-sm text-gray-500 truncate">{property.location}</p>
@@ -70,14 +69,13 @@ const SimilarProperties = ({ properties, OnSelect }) => {
                 </p>
               </div>
 
-              {/* View More Details Button */}
               <div className="px-3 pb-3">
                 <Button
                   variant="outlined"
                   fullWidth
                   className="!border-gray-400 !text-black !rounded-md"
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent triggering onClick for card
+                    e.stopPropagation();
                     OnSelect(property);
                   }}
                 >

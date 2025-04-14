@@ -15,9 +15,11 @@
     "@heroicons/react": "^2.2.0",
     "@mui/icons-material": "^6.4.9",
     "@mui/material": "^6.4.9",
+    "@reduxjs/toolkit": "^2.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {

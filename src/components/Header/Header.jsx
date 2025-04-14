@@ -16,6 +16,7 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import { useState } from 'react';
 
+
 export default function Header() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -58,6 +59,18 @@ export default function Header() {
                             `text-sm font-medium ${isActive ? 'text-orange-700' : 'text-gray-700'} hover:text-orange-700`
                         }>
                             Contact Us
+                        </NavLink>
+
+                        <NavLink to="/login" className={({ isActive }) =>
+                            `text-sm font-medium ${isActive ? 'text-orange-700' : 'text-gray-700'} hover:text-orange-700`
+                        }>
+                        Login
+                        </NavLink>
+
+                        <NavLink to="/wishlist" className={({ isActive }) =>
+                            `text-sm font-medium ${isActive ? 'text-orange-700' : 'text-gray-700'} hover:text-orange-700`
+                        }>
+                      WishList
                         </NavLink>
                     </div>
 
